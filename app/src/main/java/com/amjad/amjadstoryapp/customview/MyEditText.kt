@@ -7,6 +7,7 @@ import android.text.TextWatcher
 import android.util.AttributeSet
 import android.view.View
 import androidx.appcompat.widget.AppCompatEditText
+import com.amjad.amjadstoryapp.R
 
 class MyEditText : AppCompatEditText {
 
@@ -41,7 +42,7 @@ class MyEditText : AppCompatEditText {
             }
             override fun afterTextChanged(s: Editable) {
                 if(s.toString().length < 6){
-                    error = "Password must be 6 or above characters"
+                    error = context.getString(R.string.ETError)
                 }
 
             }
