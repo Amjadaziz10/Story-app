@@ -1,5 +1,6 @@
 package com.amjad.amjadstoryapp.api
 
+import com.amjad.amjadstoryapp.BuildConfig
 import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -25,7 +26,7 @@ class ApiConfig {
                 .build()
 
             val retrofit = Retrofit.Builder()
-                .baseUrl("https://story-api.dicoding.dev/v1/")
+                .baseUrl(BuildConfig.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .client(client)
                 .build()
