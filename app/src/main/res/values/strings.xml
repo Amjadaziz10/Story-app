@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">AmjadStoryApp</string>
+    <string name="main_logo">Main Logo</string>
+    <string name="login">Log In</string>
+    <string name="register">Register</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="registration">Registration</string>
+    <string name="name">Name</string>
+    <string name="name_tv">Name</string>
+    <string name="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</string>
+    <string name="story_image">story image</string>
+    <string name="story_image_desc">Story Image</string>
+    <string name="logout">logout</string>
+    <string name="floating_button_add">Floating Button Add</string>
+    <string name="image_uploaded_desc">image uploaded</string>
+    <string name="camera_desc">Camera</string>
+    <string name="description_tv">Description</string>
+    <string name="upload">Upload</string>
+    <string name="appwidget_text">STAR WARS BANNER</string>
+    <string name="empty_text">NO DATA</string>
+    <string name="image_widget">image_widget</string>
+    <string name="add_widget">Add widget</string>
+    <string name="app_widget_description">This is an app widget description</string>
+    <string name="map">map</string>
+    <string name="get_location">Get Location</string>
+    <string name="activate_location_alert">Activate Your Location</string>
+    <string name="location_denied">Location Denied</string>
+    <string name="location_added">Location Added</string>
+    <string name="retry">Retry</string>
+    <string name="welcome">Welcome</string>
+</resources>

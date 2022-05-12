@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AmjadStoryApp</string>
+    <string name="main_logo">Logo Utama</string>
+    <string name="login">Masuk</string>
+    <string name="register">Daftar</string>
+    <string name="password">Kata Sandi</string>
+    <string name="email">Email</string>
+    <string name="registration">Pendaftaran</string>
+    <string name="name">Nama</string>
+    <string name="name_tv">Nama</string>
+    <string name="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</string>
+    <string name="story_image">gambar story</string>
+    <string name="story_image_desc">Gambar Story</string>
+    <string name="logout">keluar</string>
+    <string name="floating_button_add">Floating Button Add</string>
+    <string name="image_uploaded_desc">gambar terunggah</string>
+    <string name="camera_desc">Kamera</string>
+    <string name="description_tv">Deskripsi</string>
+    <string name="upload">Unggah</string>
+    <string name="appwidget_text">STAR WARS BANNER</string>
+    <string name="empty_text">TIDAK ADA DATA</string>
+    <string name="image_widget">image_widget</string>
+    <string name="add_widget">Add widget</string>
+    <string name="app_widget_description">This is an app widget description</string>
+    <string name="map">map</string>
+    <string name="get_location">Dapatkan Lokasi</string>
+    <string name="activate_location_alert">Aktifkan lokasimu</string>
+    <string name="location_denied">Lokasi Ditolak</string>
+    <string name="location_added">Lokasi Ditambahkan</string>
+    <string name="retry">Coba Lagi</string>
+    <string name="welcome">Selamat Datang</string>
+</resources>

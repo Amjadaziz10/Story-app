@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_500"
+    tools:context=".ui.story.addstory.AddStoryActivity">
+
+    <ImageView
+        android:id="@+id/previewUploadedImage"
+        android:alpha="0"
+        android:layout_width="0dp"
+        android:layout_height="280dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/image_uploaded_desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_place_holder" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/camera_button"
+        android:alpha="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_button_white"
+        android:padding="12dp"
+        android:src="@drawable/ic_camera"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/previewUploadedImage" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/gallery_button"
+        android:alpha="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_button_white"
+        android:padding="12dp"
+        android:src="@drawable/ic_gallery"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/previewUploadedImage" />
+
+    <TextView
+        android:id="@+id/desc_tv"
+        android:alpha="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="@string/description_tv"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/desc_et"
+        app:layout_constraintStart_toStartOf="@+id/desc_et" />
+
+    <EditText
+        android:id="@+id/desc_et"
+        android:alpha="0"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginLeft="32dp"
+        android:inputType="textMultiLine"
+        android:padding="16dp"
+        android:gravity="top"
+        android:background="@drawable/custom_edittext"
+        android:ems="10"
+        android:lines="3"
+        android:scrollbars="vertical"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/camera_button"
+        />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loc_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:alpha="0"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="@string/get_location"
+        android:textColor="@color/blue_500"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/desc_et"
+        app:layout_constraintStart_toStartOf="@+id/desc_et"
+        app:layout_constraintTop_toBottomOf="@+id/desc_et" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/upload_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:alpha="0"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="@string/upload"
+        android:textColor="@color/blue_500"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/loc_button"
+        app:layout_constraintStart_toStartOf="@+id/loc_button"
+        app:layout_constraintTop_toBottomOf="@+id/loc_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

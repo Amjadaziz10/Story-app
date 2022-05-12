@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.authentication.RegisterActivity">
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:alpha="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/registration"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/name_et"
+        android:alpha="0"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginLeft="32dp"
+        android:background="@drawable/custom_edittext"
+        android:hint="@string/name"
+        android:drawableStart="@drawable/custom_person"
+        android:drawablePadding="8dp"
+        android:paddingStart="12sp"
+        android:paddingEnd="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_tv" />
+
+    <com.amjad.amjadstoryapp.customview.MyEditTextEmail
+        android:id="@+id/email_et"
+        android:alpha="0"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/custom_edittext"
+        android:hint="@string/email"
+        android:drawableStart="@drawable/custom_email"
+        android:drawablePadding="8dp"
+        android:paddingStart="12sp"
+        android:paddingEnd="12sp"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/name_et"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/name_et"
+        app:layout_constraintTop_toBottomOf="@+id/name_et" />
+
+    <com.amjad.amjadstoryapp.customview.MyEditText
+        android:id="@+id/password_et"
+        android:alpha="0"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/custom_edittext"
+        android:hint="@string/password"
+        android:drawableStart="@drawable/custom_lock"
+        android:drawablePadding="8dp"
+        android:paddingStart="12sp"
+        android:paddingEnd="12sp"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/email_et"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/email_et"
+        app:layout_constraintTop_toBottomOf="@+id/email_et" />
+
+    <com.amjad.amjadstoryapp.customview.MyButton
+        android:id="@+id/register_button"
+        android:alpha="0"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/custom_button"
+        android:text="@string/register"
+        app:layout_constraintEnd_toEndOf="@+id/password_et"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/password_et"
+        app:layout_constraintTop_toBottomOf="@+id/password_et" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
