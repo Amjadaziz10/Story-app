@@ -10,6 +10,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.amjad.amjadstoryapp.R
 import com.amjad.amjadstoryapp.api.ApiConfig
 import com.amjad.amjadstoryapp.data.model.LoginRequest
 import com.amjad.amjadstoryapp.data.model.LoginResponse
@@ -146,7 +147,7 @@ class MainActivity : AppCompatActivity() {
                     moveIntent()
                 } else{
                     showLoading(false)
-                    Toast.makeText(this@MainActivity, "Login Failed", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@MainActivity, getString(R.string.loginFail), Toast.LENGTH_SHORT).show()
                 }
             }
 

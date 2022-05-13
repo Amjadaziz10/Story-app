@@ -30,4 +30,5 @@
     <string name="retry">Retry</string>
     <string name="welcome">Welcome</string>
     <string name="ETError">Password must be 6 or above characters</string>
+    <string name="loginFail">Login Failed</string>
 </resources>
