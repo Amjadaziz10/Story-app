@@ -30,8 +30,6 @@ import com.amjad.amjadstoryapp.ui.story.storymap.MapsActivity
 
 class StoryActivity : AppCompatActivity() {
     private lateinit var binding: ActivityStoryBinding
-//    private val viewModel: StoryViewModel by viewModels { ViewModelFactory.getInstance() }
-
     private val viewModel: StoryViewModel by viewModels {
         ViewModelFactory(this)
     }
@@ -52,6 +50,7 @@ class StoryActivity : AppCompatActivity() {
 
         title = "${getString(R.string.welcome)}, ${sharedPreference.getString(PreferenceHelper.PREF_NAME)} !"
 
+        showLoading(true)
         getStory()
 
         binding.rvStory.layoutManager = LinearLayoutManager(this)
@@ -107,7 +106,6 @@ class StoryActivity : AppCompatActivity() {
     }
 
     private fun getStory(){
-        showLoading(true)
         val adapter = ListStoryAdapter()
         val token = sharedPreference.getString(PreferenceHelper.PREF_TOKEN)
 
@@ -129,7 +127,7 @@ class StoryActivity : AppCompatActivity() {
         if (state){
             binding.progressBar.visibility = View.VISIBLE
         }else{
-            binding.progressBar.visibility = View.GONE
+            binding.progressBar.visibility = View.INVISIBLE
         }
     }
 

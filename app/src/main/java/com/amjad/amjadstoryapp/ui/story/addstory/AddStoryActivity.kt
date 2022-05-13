@@ -97,6 +97,7 @@ class AddStoryActivity : AppCompatActivity() {
         binding.galleryButton.setOnClickListener { startGallery() }
         binding.locButton.setOnClickListener { getLastLocation() }
         binding.uploadButton.setOnClickListener {
+            showLoading(true)
             uploadImage()
         }
     }
@@ -227,6 +228,7 @@ class AddStoryActivity : AppCompatActivity() {
     }
 
     private fun uploadImage() {
+        showLoading(true)
         if (getFile != null) {
             val file = reduceFileImage(getFile as File)
 
@@ -258,19 +260,31 @@ class AddStoryActivity : AppCompatActivity() {
                     if (response.isSuccessful) {
                         val responseBody = response.body()
                         if (responseBody != null && !responseBody.error) {
+                            showLoading(false)
                             Toast.makeText(this@AddStoryActivity, responseBody.message, Toast.LENGTH_SHORT).show()
                             finish()
                         }
                     } else {
+                        showLoading(false)
                         Toast.makeText(this@AddStoryActivity, response.message(), Toast.LENGTH_SHORT).show()
                     }
                 }
                 override fun onFailure(call: Call<FileUploadResponse>, t: Throwable) {
+                    showLoading(false)
                     Toast.makeText(this@AddStoryActivity, "Retrofit instance failed", Toast.LENGTH_SHORT).show()
                 }
             })
         } else {
+            showLoading(false)
             Toast.makeText(this@AddStoryActivity, "Image must be inputted", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun showLoading(state: Boolean){
+        if (state){
+            binding.progressBar.visibility = View.VISIBLE
+        }else{
+            binding.progressBar.visibility = View.INVISIBLE
         }
     }
 
